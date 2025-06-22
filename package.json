@@ -1,0 +1,74 @@
+{
+  "name": "smart-cities-saudi",
+  "version": "1.0.0",
+  "description": "منصة تفاعلية لاستكشاف المدن الذكية السعودية ومشاريع رؤية 2030",
+  "main": "index.html",
+  "scripts": {
+    "start": "python3 -m http.server 8000",
+    "dev": "python3 -m http.server 3000",
+    "build": "echo 'Static site - no build required'",
+    "deploy": "echo 'Deploy to GitHub Pages'"
+  },
+  "keywords": [
+    "saudi-arabia",
+    "smart-cities",
+    "vision-2030",
+    "neom",
+    "the-line",
+    "qiddiya",
+    "riyadh",
+    "interactive",
+    "dashboard",
+    "charts",
+    "maps"
+  ],
+  "author": {
+    "name": "اسلام الزبيري ",
+    "email": "eslam7z.y@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eslam-alzubairy/smart-saudi-cities.git"
+  },
+  "homepage": "https://eslam-alzubairy.github.io/smart-saudi-cities",
+  "bugs": {
+    "url": "https://github.com/eslam-alzubairy/smart-saudi-cities/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "technologies": {
+    "frontend": [
+      "HTML5",
+      "CSS3",
+      "JavaScript ES6+",
+      "Chart.js",
+      "Leaflet.js",
+      "Font Awesome",
+      "Google Fonts"
+    ],
+    "features": [
+      "Responsive Design",
+      "Interactive Charts",
+      "Interactive Maps",
+      "Modal Windows",
+      "Smooth Animations",
+      "Arabic RTL Support"
+    ]
+  },
+  "project_info": {
+    "purpose": "مشروع تقني لدعم طلب منحة الحكومة السعودية",
+    "target_audience": "لجنة تقييم المنح الدراسية",
+    "vision_2030_alignment": "يدعم أهداف التحول الرقمي والمدن الذكية",
+    "technical_complexity": "متقدم - يجمع بين تطوير الويب والذكاء الاصطناعي وتصور البيانات"
+  }
+}
+

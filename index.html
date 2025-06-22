@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مدن المستقبل الذكية - رؤية السعودية 2030</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-city"></i>
+                <span>مدن المستقبل</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">الرئيسية</a></li>
+                <li><a href="#cities" class="nav-link">المدن الذكية</a></li>
+                <li><a href="#technologies" class="nav-link">التقنيات</a></li>
+                <li><a href="#statistics" class="nav-link">الإحصائيات</a></li>
+                <li><a href="#vision" class="nav-link">رؤية 2030</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="floating-elements">
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+                <div class="floating-element"></div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="title-line">مدن المستقبل</span>
+                <span class="title-line highlight">الذكية</span>
+            </h1>
+            <p class="hero-subtitle">
+                استكشف المدن الذكية السعودية التي تعيد تشكيل مستقبل العيش والعمل والترفيه
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="4">0</div>
+                    <div class="stat-label">مدن ذكية</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label">مليار ريال استثمار</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="9">0</div>
+                    <div class="stat-label">مليون نسمة</div>
+                </div>
+            </div>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollToSection('cities')">
+                    <i class="fas fa-rocket"></i>
+                    استكشف المدن
+                </button>
+                <button class="btn-secondary" onclick="scrollToSection('vision')">
+                    <i class="fas fa-eye"></i>
+                    رؤية 2030
+                </button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Cities Section -->
+    <section id="cities" class="cities-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>المدن الذكية السعودية</h2>
+                <p>مشاريع طموحة تعيد تعريف مفهوم المدن المستقبلية</p>
+            </div>
+
+            <!-- Interactive Map -->
+            <div class="map-container">
+                <h3>خريطة المدن الذكية التفاعلية</h3>
+                <div id="map" class="interactive-map"></div>
+            </div>
+
+            <!-- Cities Grid -->
+            <div class="cities-grid">
+                <div class="city-card" data-city="neom">
+                    <div class="city-image">
+                        <div class="city-icon">
+                            <i class="fas fa-mountain"></i>
+                        </div>
+                        <div class="city-overlay">
+                            <button class="explore-btn">استكشف نيوم</button>
+                        </div>
+                    </div>
+                    <div class="city-content">
+                        <h3>نيوم</h3>
+                        <p>مدينة المستقبل الذكية على ساحل البحر الأحمر</p>
+                        <div class="city-features">
+                            <span class="feature-tag">طاقة متجددة 100%</span>
+                            <span class="feature-tag">ذكاء اصطناعي</span>
+                            <span class="feature-tag">روبوتات</span>
+                        </div>
+                        <div class="city-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="35"></div>
+                            </div>
+                            <span class="progress-text">35% مكتمل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card" data-city="theline">
+                    <div class="city-image">
+                        <div class="city-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="city-overlay">
+                            <button class="explore-btn">استكشف ذا لاين</button>
+                        </div>
+                    </div>
+                    <div class="city-content">
+                        <h3>ذا لاين</h3>
+                        <p>مدينة خطية ثورية بدون سيارات أو شوارع</p>
+                        <div class="city-features">
+                            <span class="feature-tag">170 كم طولاً</span>
+                            <span class="feature-tag">500 متر ارتفاع</span>
+                            <span class="feature-tag">9 مليون نسمة</span>
+                        </div>
+                        <div class="city-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="25"></div>
+                            </div>
+                            <span class="progress-text">25% مكتمل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card" data-city="qiddiya">
+                    <div class="city-image">
+                        <div class="city-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="city-overlay">
+                            <button class="explore-btn">استكشف القدية</button>
+                        </div>
+                    </div>
+                    <div class="city-content">
+                        <h3>القدية</h3>
+                        <p>عاصمة الترفيه والرياضة والفنون</p>
+                        <div class="city-features">
+                            <span class="feature-tag">ترفيه</span>
+                            <span class="feature-tag">رياضة</span>
+                            <span class="feature-tag">ثقافة</span>
+                        </div>
+                        <div class="city-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="60"></div>
+                            </div>
+                            <span class="progress-text">60% مكتمل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="city-card" data-city="newriyadh">
+                    <div class="city-image">
+                        <div class="city-icon">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <div class="city-overlay">
+                            <button class="explore-btn">استكشف الرياض الجديدة</button>
+                        </div>
+                    </div>
+                    <div class="city-content">
+                        <h3>الرياض الجديدة</h3>
+                        <p>تطوير العاصمة لتصبح مدينة ذكية ومستدامة</p>
+                        <div class="city-features">
+                            <span class="feature-tag">نقل ذكي</span>
+                            <span class="feature-tag">مساحات خضراء</span>
+                            <span class="feature-tag">تقنيات حديثة</span>
+                        </div>
+                        <div class="city-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" data-progress="45"></div>
+                            </div>
+                            <span class="progress-text">45% مكتمل</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>التقنيات المستقبلية</h2>
+                <p>التقنيات الذكية التي تشكل مدن المستقبل</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>الذكاء الاصطناعي</h3>
+                    <p>أنظمة ذكية لإدارة المدينة وتحسين جودة الحياة</p>
+                    <div class="tech-stats">
+                        <div class="stat">
+                            <span class="stat-value">95%</span>
+                            <span class="stat-label">كفاءة الخدمات</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>الطاقة المتجددة</h3>
+                    <p>طاقة نظيفة 100% من الشمس والرياح</p>
+                    <div class="tech-stats">
+                        <div class="stat">
+                            <span class="stat-value">100%</span>
+                            <span class="stat-label">طاقة نظيفة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>إنترنت الأشياء</h3>
+                    <p>شبكة متصلة من الأجهزة الذكية</p>
+                    <div class="tech-stats">
+                        <div class="stat">
+                            <span class="stat-value">1M+</span>
+                            <span class="stat-label">جهاز متصل</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>الروبوتات</h3>
+                    <p>روبوتات خدمية لتحسين تجربة السكان</p>
+                    <div class="tech-stats">
+                        <div class="stat">
+                            <span class="stat-value">24/7</span>
+                            <span class="stat-label">خدمة مستمرة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>النقل الذكي</h3>
+                    <p>مركبات ذاتية القيادة ونقل مستدام</p>
+                    <div class="tech-stats">
+                        <div class="stat">
+                            <span class="stat-value">0</span>
+                            <span class="stat-label">انبعاثات كربون</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>الأمن السيبراني</h3>
+                    <p>حماية متقدمة للبيانات والأنظمة</p>
+                    <div class="tech-stats">
+                        <div class="stat">
+                            <span class="stat-value">99.9%</span>
+                            <span class="stat-label">مستوى الأمان</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section id="statistics" class="statistics-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>إحصائيات ومؤشرات الأداء</h2>
+                <p>بيانات حية عن تقدم المدن الذكية السعودية</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="chart-container">
+                    <h3>التقدم في البناء</h3>
+                    <canvas id="progressChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>الاستثمارات (مليار ريال)</h3>
+                    <canvas id="investmentChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>التقنيات المستخدمة</h3>
+                    <canvas id="techChart"></canvas>
+                </div>
+
+                <div class="chart-container">
+                    <h3>مؤشرات الاستدامة</h3>
+                    <canvas id="sustainabilityChart"></canvas>
+                </div>
+            </div>
+
+            <div class="kpi-grid">
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <div class="kpi-value" data-target="9000000">0</div>
+                        <div class="kpi-label">سكان متوقع</div>
+                        <div class="kpi-change positive">+15%</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <div class="kpi-value" data-target="380000">0</div>
+                        <div class="kpi-label">فرصة عمل</div>
+                        <div class="kpi-change positive">+25%</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <div class="kpi-value" data-target="500">0</div>
+                        <div class="kpi-label">مليار ريال ناتج محلي</div>
+                        <div class="kpi-change positive">+30%</div>
+                    </div>
+                </div>
+
+                <div class="kpi-card">
+                    <div class="kpi-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="kpi-content">
+                        <div class="kpi-value" data-target="100">0</div>
+                        <div class="kpi-label">% طاقة متجددة</div>
+                        <div class="kpi-change positive">+100%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision 2030 Section -->
+    <section id="vision" class="vision-section">
+        <div class="container">
+            <div class="vision-content">
+                <div class="vision-text">
+                    <h2>رؤية السعودية 2030</h2>
+                    <p class="vision-subtitle">مدن المستقبل الذكية كركيزة أساسية للتحول الوطني</p>
+                    
+                    <div class="vision-pillars">
+                        <div class="pillar">
+                            <div class="pillar-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3>مجتمع حيوي</h3>
+                            <p>مدن ذكية توفر بيئة معيشية متطورة وجودة حياة عالية</p>
+                        </div>
+
+                        <div class="pillar">
+                            <div class="pillar-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>اقتصاد مزدهر</h3>
+                            <p>استثمارات ضخمة وفرص عمل جديدة في قطاعات التقنية</p>
+                        </div>
+
+                        <div class="pillar">
+                            <div class="pillar-icon">
+                                <i class="fas fa-flag"></i>
+                            </div>
+                            <h3>وطن طموح</h3>
+                            <p>قيادة عالمية في مجال المدن الذكية والتقنيات المستقبلية</p>
+                        </div>
+                    </div>
+
+                    <div class="vision-timeline">
+                        <h3>الجدول الزمني للإنجاز</h3>
+                        <div class="timeline">
+                            <div class="timeline-item completed">
+                                <div class="timeline-year">2020</div>
+                                <div class="timeline-content">إطلاق المشاريع</div>
+                            </div>
+                            <div class="timeline-item active">
+                                <div class="timeline-year">2025</div>
+                                <div class="timeline-content">المرحلة الأولى</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-year">2030</div>
+                                <div class="timeline-content">الإنجاز الكامل</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="vision-visual">
+                    <div class="vision-logo">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgdmlld0JveD0iMCAwIDIwMCAyMDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWxsPSIjMDA2NzM5Ii8+Cjx0ZXh0IHg9IjEwMCIgeT0iODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIyNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj7Ysdik2YrYqTwvdGV4dD4KPHRleHQgeD0iMTAwIiB5PSIxMjAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIj4yMDMwPC90ZXh0Pgo8L3N2Zz4K" alt="رؤية 2030">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- City Modal -->
+    <div id="cityModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent">
+                <!-- Content will be dynamically loaded -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>مدن المستقبل الذكية</h3>
+                    <p>منصة تفاعلية لاستكشاف المدن الذكية السعودية ومشاريع رؤية 2030</p>
+                </div>
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#cities">المدن الذكية</a></li>
+                        <li><a href="#technologies">التقنيات</a></li>
+                        <li><a href="#statistics">الإحصائيات</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>تواصل معنا</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 مدن المستقبل الذكية - مشروع تقني لدعم رؤية السعودية 2030</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
